@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Bigscreen - Administration</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 </head>
 <body>
     <div class="row" id="app">
@@ -16,7 +16,7 @@
                 <img src="{{asset('img/bigscreen_logo.png')}}" alt="logo" width="100%"></a>
             <ul class="admin_menu_list">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url('/administration/acceuil')}}">Accueil</a>
+                    <a class="nav-link" href="{{url('/administration/accueil')}}">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('questionnaire.index')}}">Questionnaire</a>
