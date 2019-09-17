@@ -14,3 +14,13 @@
 Route::get('/', 'FrontController@index');
 Route::resource('answer', 'AnswerController');
 Route::get('/{id}', 'AnswerController@show')->where('id', '[0-9a-fA-F]{8}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{4}\-[0-9a-fA-F]{12}');
+Route::get('administration', 'Auth\LoginController@showLoginForm')->name('login');
+Route::post('administration', 'Auth\LoginController@login');
+Route::resource('administration/accueil', 'BackController')->middleware('auth');
+
+
+//Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
