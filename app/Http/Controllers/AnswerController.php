@@ -52,6 +52,20 @@ class AnswerController extends Controller
             ]);
         }
 
-        return redirect('/');
+        $message= "Toute l’équipe de Bigscreen vous remercie pour votre engagement. Grâce à 
+        votre investissement, nous vous préparons une application toujours plus facile à utiliser, seul ou en famille. <br>
+        Si vous désirez consulter vos réponse ultérieurement, vous pouvez consultez
+        cette adresse: <br> <a href='".url("/$user_id")."'/>" . url("/$user_id") . " </a>";
+
+        return redirect('/')->withSuccess($message);
+    }
+
+    public function show(string $id){
+        $questions = Question::all();
+        $answers = Answer::all()->where('user_id', $id);
+        if (count($answers) === 0){
+            return redirect('/');
+        }
+        return view('front.answers', ['questions'=>$questions,'answers' => $answers]);
     }
 }
