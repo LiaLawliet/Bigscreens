@@ -22,7 +22,7 @@
                     <a class="nav-link" href="{{route('questionnaire.index')}}">Questionnaire</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Réponses</a>
+                    <a class="nav-link" href="{{route('reponses.index')}}">Réponses</a>
                 </li>
                 <li>
                     <a class="logoutButton btn" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

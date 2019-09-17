@@ -18,6 +18,7 @@ Route::get('administration', 'Auth\LoginController@showLoginForm')->name('login'
 Route::post('administration', 'Auth\LoginController@login');
 Route::resource('administration/accueil', 'BackController')->middleware('auth');
 Route::resource('administration/questionnaire', 'QuestionController')->middleware('auth');
+Route::resource('administration/reponses', 'AnswersController')->middleware('auth');
 
 //Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
