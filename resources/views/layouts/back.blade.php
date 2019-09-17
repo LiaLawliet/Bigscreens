@@ -19,7 +19,7 @@
                     <a class="nav-link" href="{{url('/administration/acceuil')}}">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('questions.index')}}">Questionnaire</a>
+                    <a class="nav-link" href="{{route('questionnaire.index')}}">Questionnaire</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Réponses</a>
