@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'FrontController@index');
+Route::resource('answer', 'AnswerController');

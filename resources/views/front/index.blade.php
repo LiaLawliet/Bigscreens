@@ -7,9 +7,8 @@
     @endif
     <div class="survey_bloc">
             <p>Merci de répondre à toutes les questions et de valider le formulaire en bas de page</p>
-            <form action="#" method="post" id="survey_form">
+            <form action="{{route('answer.store')}}" method="post" id="survey_form">
                 @csrf
-                    
                 @forelse ($questions as $key => $question)
                     <div class="questions_bloc">
                         <h2>Question {{$question->question_number}}/{{count($questions)}}</h2>
@@ -41,7 +40,7 @@
         
                             @case("C")
                                 <select name="q_c[{{$question->question_number}}]" id="choice_{{$question->question_number}}" @if($errors->has('q_c.'.$question->question_number)) class="alert-danger" @endif>
-                                    <option value="">Choisissez une option</option>
+                                    <option value="">Choisissez</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
