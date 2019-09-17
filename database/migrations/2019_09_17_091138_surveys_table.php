@@ -13,7 +13,11 @@ class SurveysTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('surveys', function(Blueprint $table){
+            $table->increments('id')->unsigned();
+            $table->string('name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -23,6 +27,6 @@ class SurveysTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('surveys');
     }
 }

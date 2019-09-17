@@ -13,7 +13,18 @@ class QuestionsTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('questions', function(Blueprint $table){
+            $table->increments('id')->unsigned();
+            $table->unsignedInteger('question_number');
+            $table->unsignedInteger('survey_id');
+            $table->string('question');
+            $table->enum('question_type', ['A', 'B', 'C']);
+            $table->boolean('is_email')->nullable()->default(false);
+            $table->timestamps();
+        });
+        Schema::table('questions', function (Blueprint $table) {
+            $table->foreign('survey_id')->references('id')->on('surveys')->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +34,9 @@ class QuestionsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('questions');
+        Schema::table('questions', function (Blueprint $table) {
+            $table->dropForeign(['survey_id']);
+        });
     }
 }

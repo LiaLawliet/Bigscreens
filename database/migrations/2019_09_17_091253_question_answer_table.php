@@ -13,7 +13,15 @@ class QuestionAnswerTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('choice', function (Blueprint $table) {
+            $table->increments('id');
+            $table->unsignedInteger('question_id');
+            $table->string('answers');
+            $table->timestamps();
+        });
+        Schema::table('choice', function (Blueprint $table) {
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +31,9 @@ class QuestionAnswerTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('choice');
+        Schema::table('choice', function (Blueprint $table) {
+            $table->dropForeign(['question_id']);
+        });
     }
 }

@@ -13,7 +13,16 @@ class AnswersTable extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('answers', function (Blueprint $table) {
+            $table->increments('id')->unsigned();
+            $table->uuid('user_id');
+            $table->unsignedInteger('question_id');
+            $table->string('answer');
+            $table->timestamps();
+        });
+        Schema::table('answers', function (Blueprint $table) {
+            $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
+        });
     }
 
     /**
@@ -23,6 +32,9 @@ class AnswersTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('answers');
+        Schema::table('answers', function (Blueprint $table) {
+            $table->dropForeign(['question_id']);
+        });
     }
 }
