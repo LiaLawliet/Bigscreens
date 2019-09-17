@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class QuestionAnswerTable extends Migration
+class ChoicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class QuestionAnswerTable extends Migration
      */
     public function up()
     {
-        Schema::create('choice', function (Blueprint $table) {
+        Schema::create('choices', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('question_id');
             $table->string('answers');
             $table->timestamps();
         });
-        Schema::table('choice', function (Blueprint $table) {
+        Schema::table('choices', function (Blueprint $table) {
             $table->foreign('question_id')->references('id')->on('questions')->onDelete('cascade');
         });
     }
@@ -31,8 +31,8 @@ class QuestionAnswerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('choice');
-        Schema::table('choice', function (Blueprint $table) {
+        Schema::dropIfExists('choices');
+        Schema::table('choices', function (Blueprint $table) {
             $table->dropForeign(['question_id']);
         });
     }
