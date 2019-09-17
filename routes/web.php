@@ -17,7 +17,7 @@ Route::get('/{id}', 'AnswerController@show')->where('id', '[0-9a-fA-F]{8}\-[0-9a
 Route::get('administration', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('administration', 'Auth\LoginController@login');
 Route::resource('administration/accueil', 'BackController')->middleware('auth');
-
+Route::resource('administration/questions', 'QuestionController')->middleware('auth');
 
 //Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
