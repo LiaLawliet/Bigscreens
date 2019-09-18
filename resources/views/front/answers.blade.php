@@ -1,7 +1,7 @@
 @extends('layouts/master')
 @section('content')
     @forelse ($questions as $question)
-        <div class="answers card">
+        <div class="your-answers card">
             <h2>Question {{$question->question_number}}/{{count($questions)}}</h2>
             <p>{{$question->question}}</p>
             @forelse ($answers as $answer)

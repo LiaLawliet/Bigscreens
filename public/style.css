@@ -42,13 +42,31 @@ p{
     background: none;
     transition: all 0.3s ease 0s;
 }
-.answers{
+.your-answers{
     background-color: black;
     margin-bottom: 30px;
     padding:10px 10px;
 }
 
-.answers h2{
+.your-answers h2{
     color: #d47a3d;
     font-family: 'Orbitron', sans-serif;
+}
+.login-card{
+    border: none;
+}
+.card-header{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+}
+.btn-login{
+    color: #d47a3d;
+    border-color: #d47a3d;
+    background-color: #fff;
+}
+.btn-login:hover{
+    color: #fff;
+    border-color: #d47a3d;
+    background-color: #d47a3d;
 }
