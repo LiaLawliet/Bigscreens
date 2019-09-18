@@ -5,8 +5,8 @@
         <table class="table">
             <thead>
                 <th width="5%">N°</th>
-                <th width="65%">Question</th>
-                <th width="30%">Réponses</th>
+                <th width="60%">Question</th>
+                <th width="35%">Réponses</th>
             </thead>
             @forelse ($questions as $question)
                 <tr class="answers_list">

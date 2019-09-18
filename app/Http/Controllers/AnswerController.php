@@ -53,8 +53,8 @@ class AnswerController extends Controller
         }
 
         $message= "Toute l’équipe de Bigscreen vous remercie pour votre engagement. Grâce à 
-        votre investissement, nous vous préparons une application toujours plus facile à utiliser, seul ou en famille. <br>
-        Si vous désirez consulter vos réponse ultérieurement, vous pouvez consultez
+        votre investissement, nous vous préparons une application toujours plus facile à utiliser, seul(e) ou en famille. <br>
+        Si vous désirez consulter vos réponse ultérieurement, vous pouvez consulter
         cette adresse: <br> <a href='".url("/$user_id")."'/>" . url("/$user_id") . " </a>";
 
         return redirect('/')->withSuccess($message);
