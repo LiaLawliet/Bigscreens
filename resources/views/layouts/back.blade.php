@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="row" id="app">
-        <div class="col-md-3 admin_menu">
+        <div class=" admin_menu">
             <a href="{{url('/administration/accueil')}}">
                 <img src="{{asset('img/bigscreen_logo.png')}}" alt="logo" width="100%"></a>
             <ul class="admin_menu">
@@ -34,7 +34,7 @@
                 </form>
             </ul>
         </div>
-        <div class="col-md-9 admin_content">
+        <div class=" admin_content">
             @yield('content')
         </div>
     </div>

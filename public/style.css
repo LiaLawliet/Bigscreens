@@ -93,3 +93,17 @@ a.nav-link:hover{
     color: #fff;
     background-color: #d47a3d;
 }
+div.admin_menu{
+    height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.admin_content{
+    margin-left: 400px;
+    width: 100%;
+}
