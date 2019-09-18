@@ -2,7 +2,7 @@
 
 @section('content')
     @forelse ($answers as $user_answer)
-        <table class="table table-light">
+        <table class="table">
             <thead>
                 <th width="5%">N°</th>
                 <th width="65%">Question</th>
