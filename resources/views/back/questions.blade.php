@@ -1,14 +1,15 @@
 @extends('layouts.back')
 
 @section('content')
-    <table class="table table-light">
-        <thead>
+    <table class="table table-dark">
+        <thead class="">
             <tr>
                 <th>N°</th>
                 <th>Question</th>
                 <th>Type</th>
             </tr>
         </thead>
+        <tbody>
         @forelse ($questions as $question)
             <tr>
                 <td>
@@ -22,6 +23,7 @@
                 </td>
             </tr>
         @empty
+        </tbody>
             
         @endforelse
     </table>

@@ -107,3 +107,17 @@ div.admin_menu{
     margin-left: 400px;
     width: 100%;
 }
+table{
+    border: 1px solid #d47a3d;
+}
+tr{
+    border: 1px solid #d47a3d;
+}
+thead{
+    color: #fff;
+    background-color: black;
+}
+tbody{
+    color: #fff;
+    background-color: #2e2e2e;
+}
