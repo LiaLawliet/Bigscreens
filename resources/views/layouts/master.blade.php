@@ -14,7 +14,7 @@
         <div class="row">
             <div class="col-md-12 text-center logo_container">
                 <a href="/">
-                    <img src="{{asset('img/bigscreen_logo.png')}}" alt="logo" width="300">
+                    <img src="{{asset('img/bigscreen_logo.png')}}" alt="logo" width="500">
                 </a>
             </div>
         </div>

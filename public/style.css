@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+body{
+    background-color: #3a3a3a;
+}
+img{
+    margin: 50px 0px;
+}
 div#app{
     width:100%;
+}
+p{
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+.survey_bloc{
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+}
+.questions_bloc{
+    margin: 30px 0px;
+}
+.validate-form{
+    text-align: center;
+    padding: 50px 0px;
+}
+.btn-validate {
+    border-color: #d47a3d;
+    background-color: #d47a3d;
+    color: #fff !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+.btn-validate:hover {
+    color: #d47a3d !important;
+    background-color: #d47a3d;
+    font-weight: 700 !important;
+    letter-spacing: 3px;
+    background: none;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
 }

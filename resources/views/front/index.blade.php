@@ -13,7 +13,7 @@
                     <div class="questions_bloc">
                         <h2>Question {{$question->question_number}}/{{count($questions)}}</h2>
                         <label>{{$question->question}}</label>
-        
+                        <br>
                         @switch($question->question_type)
                             @case("A")
                                 <select name="q_a[{{$question->question_number}}]" id="choice_{{$question->question_number}}" @if($errors->has('q_a.'.$question->question_number)) class="alert-danger" @endif>
@@ -55,8 +55,9 @@
                 @empty
                     <p>Le sondage ne possede pas de questions.</p>
                 @endforelse
-                
-                <button type="submit" class="btn" value="Valider">Valider</button>
+                <div class="validate-form">
+                    <button type="submit" class="btn-validate" value="Valider">Valider</button>
+                </div>
             </form>
     </div>
 @endsection
