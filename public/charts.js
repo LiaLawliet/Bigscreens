@@ -39,8 +39,9 @@ function pieCharts(data){
                     }
                 },
                 legend: {
+                    position:'left',
                     labels: {
-                        fontColor: "black",
+                        fontColor: "white",
                         fontSize: 14
                     }
                 }
@@ -64,10 +65,8 @@ function radarCharts(data) {
     let canvas = document.createElement("canvas");
     canvas.id = "radarChart";
 
-    document
-        .getElementById("chartArea")
-        .appendChild(div)
-        .appendChild(canvas);
+    document.getElementById("chartArea").appendChild(div).appendChild(canvas);
+    
 
     let ctx = document.getElementById("radarChart").getContext("2d");
     new Chart(ctx, {
@@ -76,13 +75,13 @@ function radarCharts(data) {
             labels: labels,
             datasets: [
                 {
-                    label: "Résultats qualité",
+                    label: "Qualité du produit",
                     fill: true,
-                    backgroundColor: "rgba(255,99,132,0.2)",
-                    borderColor: "rgba(255,99,132,1)",
+                    backgroundColor: "#d4793d56",
+                    borderColor: "#d47a3d",
                     borderWidth: 1,
                     pointBorderColor: "#fff",
-                    pointBackgroundColor: "rgba(255,99,132,1)",
+                    pointBackgroundColor: "#d47a3d",
                     pointBorderColor: "#fff",
                     data: values
                 }
@@ -91,18 +90,22 @@ function radarCharts(data) {
         options: {
             maintainAspectRatio: true,
             scale: {
+                gridLines: {
+                    color: "black"
+                },
                 ticks: {
                     beginAtZero: true,
                     max: 5,
                     stepSize: 1,
-                    backdropColor: "#37404a",
-                    fontColor: "black"
+                    backdropColor: "transparent",
+                    fontColor: "white"
                 },
                 pointLabels: {
                     fontColor: "#FFF"
                 }
             },
             legend: {
+                position:'left',
                 labels: {
                     fontColor: "white",
                     fontSize: 14

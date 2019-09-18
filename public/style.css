@@ -70,3 +70,26 @@ p{
     border-color: #d47a3d;
     background-color: #d47a3d;
 }
+.chart_container{
+    padding:30px 50px;
+}
+
+ul.admin_menu{
+    list-style-type: none;
+    text-align: center;
+}
+
+a.nav-link{
+    color: #fff;
+}
+a.nav-link:hover{
+    color: #d47a3d;
+}
+.logoutBtn{
+    color: #d47a3d;
+    border-color: #d47a3d;
+}
+.logoutBtn:hover{
+    color: #fff;
+    background-color: #d47a3d;
+}

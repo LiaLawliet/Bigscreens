@@ -14,7 +14,7 @@
         <div class="col-md-3 admin_menu">
             <a href="{{url('/administration/accueil')}}">
                 <img src="{{asset('img/bigscreen_logo.png')}}" alt="logo" width="100%"></a>
-            <ul class="admin_menu_list">
+            <ul class="admin_menu">
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/administration/accueil')}}">Accueil</a>
                 </li>
@@ -25,7 +25,7 @@
                     <a class="nav-link" href="{{route('reponses.index')}}">Réponses</a>
                 </li>
                 <li>
-                    <a class="logoutButton btn" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <a class="logoutBtn btn" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                         Déconnexion
                     </a>
                 </li>
